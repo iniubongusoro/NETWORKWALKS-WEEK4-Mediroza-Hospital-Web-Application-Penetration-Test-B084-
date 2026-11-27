@@ -93,7 +93,7 @@ Username: admin' --
 Password: anything
 ```
 
-<img src="screenshots/13-sql-injection-diagram.jpg" width="700"/>
+<img src="sql_injection.jpeg" width="700"/>
 
 <img src="13_p9_sql-error-admin-quote-dash-payload.png" width="800"/>
 
