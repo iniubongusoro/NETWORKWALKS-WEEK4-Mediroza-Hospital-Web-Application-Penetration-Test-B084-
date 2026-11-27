@@ -106,7 +106,7 @@ Once authenticated, a directory listing on `/patient/` further exposed the appli
 ###  Finding 3 — Confidential PDFs Exposed (🟠 High)
 The bypassed portal served three downloadable, password-protected lab report PDFs.
 
-<img src="screenshots/01-patient-portal-reports.jpg" width="800"/>
+<img src="01_p2_patient-portal-lab-reports-list.png" width="800"/>
 <img src="screenshots/16-downloaded-encrypted-pdfs.jpg" width="800"/>
 <img src="screenshots/17-decrypted-pdfs.png" width="800"/>
 
