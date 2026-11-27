@@ -165,8 +165,8 @@ Following the metadata lead, `/old/` had directory listing enabled, exposing `me
 ###  Finding 7 — Staff Salaries & Shareholder Data Leaked (🔴 Critical)
 The backup contained **plaintext** names, roles, emails, phone numbers, national ID numbers, and salaries for all 30 staff — plus the full shareholding breakdown for all 10 hospital shareholders. Cross-referencing confirmed `j.malik` (the metadata author) is Jameel Malik, the IT Systems Administrator — tying the entire attack chain together.
 
-<img src="screenshots/03-staff-records-leaked.png" width="800"/>
-<img src="screenshots/04-staff-shareholders-table-end.jpg" width="800"/>
+<img src="04_p3_sql-backup-staff-end-and-shareholders.png" width="800"/>
+<img src="04_p3_sql-backup-staff-end-and-shareholders.png" width="800"/>
 
 **Reconstructed data:**
 
