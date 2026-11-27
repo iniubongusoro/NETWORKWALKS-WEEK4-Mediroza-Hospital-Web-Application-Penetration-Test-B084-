@@ -143,7 +143,7 @@ All three PDFs cracked trivially using small wordlists:
 `exiftool` revealed hidden metadata in all three reports. Report 3 contained an internal IT comment pointing directly at a server backup location.
 
 <img src="09_p6_exiftool-report1.png" width="800"/>
-<img src="screenshots/10-exiftool-report2.jpg" width="800"/>
+<img src="14_p10_directory-listing-patient-folder.png" width="800"/>
 
 **Key leak:**
 ```
