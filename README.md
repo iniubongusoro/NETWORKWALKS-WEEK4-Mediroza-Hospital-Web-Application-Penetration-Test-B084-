@@ -142,7 +142,7 @@ All three PDFs cracked trivially using small wordlists:
 ###  Finding 5 — Sensitive Metadata in PDFs (🟡 Medium)
 `exiftool` revealed hidden metadata in all three reports. Report 3 contained an internal IT comment pointing directly at a server backup location.
 
-<img src="screenshots/09-exiftool-report1.jpg" width="800"/>
+<img src="09_p6_exiftool-report1.png" width="800"/>
 <img src="screenshots/10-exiftool-report2.jpg" width="800"/>
 
 **Key leak:**
