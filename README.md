@@ -95,7 +95,7 @@ Password: anything
 
 <img src="screenshots/13-sql-injection-diagram.jpg" width="700"/>
 
-<img src="screenshots/14-sql-injection-error.jpg" width="800"/>
+<img src="13_p9_sql-error-admin-quote-dash-payload.png" width="800"/>
 
 Once authenticated, a directory listing on `/patient/` further exposed the application's server-side files:
 
