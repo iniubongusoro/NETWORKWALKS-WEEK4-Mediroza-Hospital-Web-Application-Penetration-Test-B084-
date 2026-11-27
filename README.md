@@ -151,7 +151,7 @@ Author:   j.malik
 Comments: DB backup moved to /old before site migration, do not delete
 ```
 
-<img src="screenshots/11-exiftool-report3-itadmin-comment.jpg" width="800"/>
+<img src="11_p7_exiftool-report3-with-comment.png" width="800"/>
 
 ---
 
