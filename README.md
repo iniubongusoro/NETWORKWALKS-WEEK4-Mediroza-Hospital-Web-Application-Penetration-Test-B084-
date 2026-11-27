@@ -120,7 +120,7 @@ The bypassed portal served three downloadable, password-protected lab report PDF
 
 <img src="18_p13_PDF2-pathology-report-Reddy.png" width="700"/>
 <img src="19_p14_PDF3-pathology-report-Thompson.png" width="700"/>
-<img src="screenshots/20-pdf3-emily-thompson-report.png" width="700"/>
+<img src="shareholders.jpeg" width="700"/>
 
 ---
 
