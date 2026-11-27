@@ -75,7 +75,7 @@ flowchart TD
 ###  Finding 1 — Username Enumeration (🟡 Medium)
 Different error messages for a wrong username (`Username not found`) versus a wrong password (`Incorrect password`) confirmed `admin` as a valid account.
 
-<img src="screenshots/12-patient-portal-login-page.jpg" width="800"/>
+<img src="12_p9_patient-portal-login-page.png" width="800"/>
 
 ---
 
