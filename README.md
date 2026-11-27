@@ -1,4 +1,4 @@
-🛡️ Mediroza General Hospital — Penetration Testing Report
+ Mediroza General Hospital — Penetration Testing Report
 ==========================================================
 
 ### Black-box web application security assessment demonstrating a full attack chain from recon to a critical data breach
@@ -11,17 +11,17 @@
 
 ---
 
-## 📋 Overview
+##  Overview
 
 This repository documents a **black-box penetration test** performed against a deliberately vulnerable training target, `medirozahospital.com`, as the **Week 4 Capstone Project** for the Networkwalks B084 Cybersecurity Internship. The engagement was conducted with written client authorization under a controlled, educational environment.
 
 The assessment uncovered **7 vulnerabilities (Medium → Critical)** and chains them into a single narrative: a login page information leak escalates into a full SQL injection authentication bypass, which exposes patient medical PDFs, which — through weak passwords and leftover metadata — leads to a forgotten database backup containing every staff member's salary and the hospital's full shareholder register.
 
-> ⚠️ **Educational use only.** This report was produced in a controlled training environment with explicit written authorization. These techniques must never be used against any system without permission from its owner.
+>  **Educational use only.** This report was produced in a controlled training environment with explicit written authorization. These techniques must never be used against any system without permission from its owner.
 
 ---
 
-## 🧰 Lab Environment
+## Lab Environment
 
 | Component | Detail |
 |---|---|
@@ -33,23 +33,23 @@ The assessment uncovered **7 vulnerabilities (Medium → Critical)** and chains 
 
 ---
 
-## 🔗 Full Attack Chain
+##  Full Attack Chain
 
 ```mermaid
 flowchart TD
     A[robots.txt recon<br/>exposes /patient /staff /old] --> B[Username enumeration<br/>confirms 'admin' is valid]
-    B --> C[SQL injection in login form<br/>admin' -- bypasses auth]
-    C --> D[Directory listing of /patient/<br/>confirms app files]
-    C --> E[3 encrypted patient PDFs<br/>downloaded from portal]
-    E --> F[Weak PDF passwords<br/>cracked via wordlist attack]
-    F --> G[exiftool metadata leak<br/>IT admin comment: 'DB backup moved to /old']
-    G --> H[/old/ directory listing enabled<br/>mediroza_db_backup_2019.sql exposed]
-    H --> I[CRITICAL: Plaintext staff salaries<br/>+ full shareholder register]
+     [SQL injection in login form<br/>admin' -- bypasses auth]
+    [Directory listing of /patient/<br/>confirms app files]
+     [3 encrypted patient PDFs<br/>downloaded from portal]
+     [Weak PDF passwords<br/>cracked via wordlist attack]
+    [exiftool metadata leak<br/>IT admin comment: 'DB backup moved to /old']
+     [/old/ directory listing enabled<br/>mediroza_db_backup_2019.sql exposed]
+     [CRITICAL: Plaintext staff salaries<br/>+ full shareholder register]
 ```
 
 ---
 
-## 📊 Findings Summary
+##  Findings Summary
 
 | # | Vulnerability | Location | Risk |
 |---|---|---|---|
@@ -65,21 +65,21 @@ flowchart TD
 
 ## 🔍 Step-by-Step Findings & Evidence
 
-### 1️⃣ Recon — robots.txt Disclosure
+###  Recon — robots.txt Disclosure
 `robots.txt` disallowed `/patient/`, `/staff/`, and `/old/` — effectively handing an attacker a map of the hidden directories it was trying to hide.
 
 <img src="screenshots/05-robots-txt-disclosure.jpg" width="800"/>
 
 ---
 
-### 2️⃣ Finding 1 — Username Enumeration (🟡 Medium)
+###  Finding 1 — Username Enumeration (🟡 Medium)
 Different error messages for a wrong username (`Username not found`) versus a wrong password (`Incorrect password`) confirmed `admin` as a valid account.
 
 <img src="screenshots/12-patient-portal-login-page.jpg" width="800"/>
 
 ---
 
-### 3️⃣ Finding 2 — SQL Injection Login Bypass (🔴 Critical)
+###  Finding 2 — SQL Injection Login Bypass (🔴 Critical)
 A single quote in the username field broke the backend SQL query and returned a MySQL syntax error, confirming the field was injectable:
 
 ```sql
@@ -103,7 +103,7 @@ Once authenticated, a directory listing on `/patient/` further exposed the appli
 
 ---
 
-### 4️⃣ Finding 3 — Confidential PDFs Exposed (🟠 High)
+###  Finding 3 — Confidential PDFs Exposed (🟠 High)
 The bypassed portal served three downloadable, password-protected lab report PDFs.
 
 <img src="screenshots/01-patient-portal-reports.jpg" width="800"/>
@@ -124,7 +124,7 @@ The bypassed portal served three downloadable, password-protected lab report PDF
 
 ---
 
-### 5️⃣ Finding 4 — Weak PDF Passwords (🟠 High)
+###  Finding 4 — Weak PDF Passwords (🟠 High)
 All three PDFs cracked trivially using small wordlists:
 
 | File | Cracked Password | Wordlist |
@@ -139,7 +139,7 @@ All three PDFs cracked trivially using small wordlists:
 
 ---
 
-### 6️⃣ Finding 5 — Sensitive Metadata in PDFs (🟡 Medium)
+###  Finding 5 — Sensitive Metadata in PDFs (🟡 Medium)
 `exiftool` revealed hidden metadata in all three reports. Report 3 contained an internal IT comment pointing directly at a server backup location.
 
 <img src="screenshots/09-exiftool-report1.jpg" width="800"/>
@@ -155,14 +155,14 @@ Comments: DB backup moved to /old before site migration, do not delete
 
 ---
 
-### 7️⃣ Finding 6 — Forgotten Backup, Directory Listing Enabled (🔴 Critical)
+###  Finding 6 — Forgotten Backup, Directory Listing Enabled (🔴 Critical)
 Following the metadata lead, `/old/` had directory listing enabled, exposing `mediroza_db_backup_2019.sql` directly to the browser.
 
 <img src="screenshots/02-old-folder-backup-listing.jpg" width="800"/>
 
 ---
 
-### 8️⃣ Finding 7 — Staff Salaries & Shareholder Data Leaked (🔴 Critical)
+###  Finding 7 — Staff Salaries & Shareholder Data Leaked (🔴 Critical)
 The backup contained **plaintext** names, roles, emails, phone numbers, national ID numbers, and salaries for all 30 staff — plus the full shareholding breakdown for all 10 hospital shareholders. Cross-referencing confirmed `j.malik` (the metadata author) is Jameel Malik, the IT Systems Administrator — tying the entire attack chain together.
 
 <img src="screenshots/03-staff-records-leaked.png" width="800"/>
@@ -175,7 +175,7 @@ The backup contained **plaintext** names, roles, emails, phone numbers, national
 
 ---
 
-## 🛠️ Recommendations
+##  Recommendations
 
 | Finding | Fix |
 |---|---|
@@ -193,13 +193,13 @@ $stmt->execute([$username, $password]);
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 A complete attack chain — from a single disclosed directory to full financial and ownership data exposure — was achieved using nothing but publicly documented, well-known techniques. All **Critical** and **High** findings should be remediated before this system handles real patient data.
 
 ---
 
-## 👤 Credits
+##  Credits
 
 | Role | Name |
 |---|---|
