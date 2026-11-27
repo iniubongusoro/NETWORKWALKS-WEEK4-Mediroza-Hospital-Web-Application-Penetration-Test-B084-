@@ -134,7 +134,7 @@ All three PDFs cracked trivially using small wordlists:
 | `patient_report_3.pdf` | `!@#$%^&` | Extended (JTR default) |
 
 <img src="06_p5_password-cracker-result-password.png" width="800"/>
-<img src="screenshots/07-pdf-password-cracked-password.jpg" width="800"/>
+<img src="07_p5_password-cracker-result-123456.png" width="800"/>
 <img src="screenshots/08-pdf-password-cracked-extended-wordlist.jpg" width="800"/>
 
 ---
