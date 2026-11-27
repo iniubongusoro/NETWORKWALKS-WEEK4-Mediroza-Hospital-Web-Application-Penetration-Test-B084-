@@ -108,7 +108,7 @@ The bypassed portal served three downloadable, password-protected lab report PDF
 
 <img src="01_p2_patient-portal-lab-reports-list.png" width="800"/>
 <img src="16_p12_patient-pdfs-unlocked-folder.png" width="800"/>
-<img src="screenshots/17-decrypted-pdfs.png" width="800"/>
+<img src="17_p13_PDF1-pathology-report-Dlamini.png" width="800"/>
 
 **Decrypted report contents:**
 
