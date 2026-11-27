@@ -158,7 +158,7 @@ Comments: DB backup moved to /old before site migration, do not delete
 ###  Finding 6 — Forgotten Backup, Directory Listing Enabled (🔴 Critical)
 Following the metadata lead, `/old/` had directory listing enabled, exposing `mediroza_db_backup_2019.sql` directly to the browser.
 
-<img src="screenshots/02-old-folder-backup-listing.jpg" width="800"/>
+<img src="02_p2_sql-backup-file-top-in-browser.png" width="800"/>
 
 ---
 
