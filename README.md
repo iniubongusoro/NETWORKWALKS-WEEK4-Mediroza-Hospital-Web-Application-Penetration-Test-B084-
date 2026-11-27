@@ -68,7 +68,7 @@ flowchart TD
 ###  Recon — robots.txt Disclosure
 `robots.txt` disallowed `/patient/`, `/staff/`, and `/old/` — effectively handing an attacker a map of the hidden directories it was trying to hide.
 
-<img src="screenshots/05-robots-txt-disclosure.jpg" width="800"/>
+<img src="05_p4_robots-txt-curl-output.png" width="800"/>
 
 ---
 
