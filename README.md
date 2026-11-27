@@ -135,7 +135,7 @@ All three PDFs cracked trivially using small wordlists:
 
 <img src="06_p5_password-cracker-result-password.png" width="800"/>
 <img src="07_p5_password-cracker-result-123456.png" width="800"/>
-<img src="screenshots/08-pdf-password-cracked-extended-wordlist.jpg" width="800"/>
+<img src="08_p6_password-cracker-result-report3-special-chars.png" width="800"/>
 
 ---
 
