@@ -119,7 +119,7 @@ The bypassed portal served three downloadable, password-protected lab report PDF
 | `patient_report_3.pdf` | Emily Thompson |
 
 <img src="18_p13_PDF2-pathology-report-Reddy.png" width="700"/>
-<img src="screenshots/19-pdf2-priya-reddy-report.png" width="700"/>
+<img src="19_p14_PDF3-pathology-report-Thompson.png" width="700"/>
 <img src="screenshots/20-pdf3-emily-thompson-report.png" width="700"/>
 
 ---
