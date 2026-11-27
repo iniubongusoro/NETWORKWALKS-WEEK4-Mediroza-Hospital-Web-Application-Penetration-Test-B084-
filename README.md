@@ -170,7 +170,7 @@ The backup contained **plaintext** names, roles, emails, phone numbers, national
 
 **Reconstructed data:**
 
-<img src="screenshots/22-staff-table-reconstructed.png" width="700"/>
+<img src="staff.jpeg" width="700"/>
 
 ---
 
