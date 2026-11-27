@@ -99,7 +99,7 @@ Password: anything
 
 Once authenticated, a directory listing on `/patient/` further exposed the application's server-side files:
 
-<img src="screenshots/15-directory-listing-patient.jpg" width="800"/>
+<img src="14_p10_directory-listing-patient-folder.png" width="800"/>
 
 ---
 
