@@ -118,7 +118,7 @@ The bypassed portal served three downloadable, password-protected lab report PDF
 | `patient_report_2.pdf` | Priya Reddy |
 | `patient_report_3.pdf` | Emily Thompson |
 
-<img src="screenshots/18-pdf1-sipho-dlamini-report.png" width="700"/>
+<img src="18_p13_PDF2-pathology-report-Reddy.png" width="700"/>
 <img src="screenshots/19-pdf2-priya-reddy-report.png" width="700"/>
 <img src="screenshots/20-pdf3-emily-thompson-report.png" width="700"/>
 
